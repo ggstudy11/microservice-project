@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: user-service
+
+  profiles:
+    active: dev
+
+  cloud:
+    nacos:
+      config:
+        server-addr: 8.153.102.70:8848
+
+        namespace: a46e025c-7fd4-4216-88ec-aee9394ea664
+        group: DEFAULT_GROUP
+        file-extension: yaml
+
+        shared-configs:
+          - data-id: common-db.yaml
+            group: COMMON_GROUP
+            refresh: true

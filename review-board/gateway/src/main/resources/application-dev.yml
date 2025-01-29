@@ -1,0 +1,14 @@
+# port
+server:
+  port: 8080
+
+# spring
+spring:
+  config:
+    import: optional:nacos://8.153.102.70:8848
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 8.153.102.70:8848
+

@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: gateway
+
+  profiles:
+    active: dev
+
+  cloud:
+    nacos:
+      config:
+        server-addr: 8.153.102.70:8848
+        namespace: dev
+        group: DEFAULT_GROUP
+        file-extension: yaml
