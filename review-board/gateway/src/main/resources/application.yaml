@@ -1,0 +1,23 @@
+#JWT 配置
+rb:
+  jwt:
+    secret: "your-256-bit-secret-for-hs2561111111"  # HS256密钥
+    expiration: 3600        # 过期时间(秒)
+    algorithm: HS256        # 算法类型
+    rsa:
+      public-key: "classpath:rsa/public.key"  # RS256公钥路径
+      private-key: "classpath:rsa/private.key" # RS256私钥路径
+
+  auth:
+    excludePaths:
+      - /api/user/user/test
+      - /api/user/user/login
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: user
+          uri: lb://user-service
+          predicates:
+            - Path=/api/user/**
