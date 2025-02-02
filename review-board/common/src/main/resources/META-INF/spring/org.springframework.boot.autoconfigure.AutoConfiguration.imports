@@ -1,1 +1,2 @@
 com.rb.common.config.JwtConfig
+com.rb.common.config.MvcConfig
